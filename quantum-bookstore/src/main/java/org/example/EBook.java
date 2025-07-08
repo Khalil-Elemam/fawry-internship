@@ -2,7 +2,7 @@ package org.example;
 
 import java.time.Year;
 
-public class EBook extends Book {
+public class EBook extends Book implements Purchasable {
     private String fileType;
 
     public EBook(
@@ -22,11 +22,6 @@ public class EBook extends Book {
 
     public void setFileType(String fileType) {
         this.fileType = fileType;
-    }
-
-    @Override
-    public boolean isAvailableForPurchase() {
-        return true; // EBooks are always available
     }
 
     @Override

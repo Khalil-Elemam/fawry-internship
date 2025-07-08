@@ -2,7 +2,7 @@ package org.example;
 
 import java.time.Year;
 
-public class PaperBook extends Book {
+public class PaperBook extends Book implements Purchasable {
     private int stock;
 
     public PaperBook(
@@ -29,11 +29,6 @@ public class PaperBook extends Book {
             throw new IllegalArgumentException("Quantum book store: Not enough stock available. Available: " + stock + ", Requested: " + quantity);
         }
         stock -= quantity;
-    }
-
-    @Override
-    public boolean isAvailableForPurchase() {
-        return stock > 0;
     }
 
     @Override

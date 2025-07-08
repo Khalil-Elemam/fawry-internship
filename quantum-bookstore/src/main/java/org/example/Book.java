@@ -37,17 +37,11 @@ public abstract class Book {
         this.price = price;
     }
 
-    public abstract boolean isAvailableForPurchase();
-    public abstract void processPurchase(int quantity, String email, String address);
     public abstract String getBookType();
 
     @Override
     public String toString() {
-        return "Book{" +
-                "isbn='" + isbn + '\'' +
-                ", title='" + title + '\'' +
-                ", year=" + year +
-                ", price=" + price +
-                '}';
+        return String.format("Book{isbn='%s', title='%s', year=%s, price=%.2f}",
+                           isbn, title, year, price);
     }
 }
